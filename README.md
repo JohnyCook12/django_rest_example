@@ -5,6 +5,7 @@ Rest API endpoint to save, display and delete user activity. Delete permission o
 login:  admin
 pass:   Strongpass123
 
+
 login:  peter
 pass:   Strongpass123
 
