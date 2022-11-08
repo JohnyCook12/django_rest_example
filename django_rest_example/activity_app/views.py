@@ -1,10 +1,13 @@
 from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
 
+from rest_framework import mixins, generics
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from .serializers import ActivitySerializer
 from .models import Activity
+from django.contrib.auth.models import User
+from .serializers import UserSerializer
 
 # Create your views here.
 def index(request):
@@ -39,3 +42,11 @@ def activityDelete(request, id):
     activity = Activity.objects.get(id=id)
     activity.delete()
     return Response('Item deleted')
+
+class UserList(generics.ListAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
