@@ -1,10 +1,12 @@
 # django_rest_example
 Rest API endpoint to save, display and delete user activity. Delete permission only for is_staff user
 
-**Admin credentials:**
+**Credentials:**
 login:  admin
 pass:   Strongpass123
 
+login:  peter
+pass:   Strongpass123
 
 
 
