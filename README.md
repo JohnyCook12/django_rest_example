@@ -1,28 +1,44 @@
 # django_rest_example
-Rest API endpoint to save, display and delete user activity. Delete permission only for is_staff user
 
-**Credentials:**
+# **People Management App**
+
+**Whole API swagger documentation:**
+http://127.0.0.1:8000/swagger
+
+**Grouping API documentation:**
+http://127.0.0.1:8000/grouping/people               - get/post name,age of people
+http://127.0.0.1:8000/grouping/people/<id>          - get/post/update/delete id,name,age,group of person
+http://127.0.0.1:8000/grouping/groups               - get/post name of groups
+http://127.0.0.1:8000/grouping/groups/<id>          - get/post/update/delete name of group
+http://127.0.0.1:8000/grouping/people_groups        - get id,name,age,group of people
+
+
+**Activity_app API documentation:**
+http://127.0.0.1:8000/activity/activity_list        - get/post name of activity 
+http://127.0.0.1:8000/activity/activity_list/<id>   - get/post name of activity 
+http://127.0.0.1:8000/activity/users                - get activities of all users 
+http://127.0.0.1:8000/activity/users/<id>           - get activities of user 
+
+
+**Superuser Credentials:**
 login:  admin
 pass:   Strongpass123
 
 
-login:  peter
-pass:   Strongpass123
+### **Grouping app documentation**
+
+Rest API for create/display/edit/delete people and groups. People can be added/removed to groups.
+
+People:
+    - name
+    - age
+Group:
+    - name
+
+
+### **Activity app documentation**
+
+Simple Rest API endpoint to write, display and delete user activity (after login). Delete permission is only for is_staff user.
 
 
 
-**Zadání funkčnosti**
-
-Cílem je vytvořit funkční rest API endpoint, který bude sloužit k ukládání, zobrazení a mazání aktivit uživatele, kde jen příhlášený uživatel s opravněním is_staff bude moci mazat aktivity.
-Formou Jsonu bude přijímat string popisující aktivitu uživatele, například “uživatel otevřel obrázek”, nebo “uživatel se registroval” + vazba na uživatele.
-
-Použité technologie
-Django
-Django rest framework
-libovolná databáze
-
-Odhad náročnosti
-zkušený vývojář: 2 hodiny
-začátečník: ~6 hodin
-
-Vypracovaný úkol nám prosím zašlete v podobě odkazu na git.
