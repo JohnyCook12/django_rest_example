@@ -30,6 +30,7 @@ ALLOWED_HOSTS = []
 
 INSTALLED_APPS = [
     'rest_framework',
+    'grouping.apps.GroupingConfig',
     'activity_app.apps.ActivityAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -75,7 +76,8 @@ WSGI_APPLICATION = 'src.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': BASE_DIR / 'db_gr.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
     }
 }
 
