@@ -17,7 +17,7 @@ class PersonCreateSerializer(serializers.ModelSerializer):
     age = serializers.IntegerField(min_value=1, max_value=160)
     class Meta:
         model = Person
-        fields = ['name', 'age']
+        fields = ['id','name', 'age']
 
 
 class GroupSerializer(serializers.ModelSerializer):
