@@ -1,6 +1,8 @@
 # django_rest_example
 
 # **People Management App**
+run server command:         python .\manage.py runserver
+server address and port:    http://127.0.0.1:8000/
 
 **Whole API swagger documentation:**
 http://127.0.0.1:8000/swagger
